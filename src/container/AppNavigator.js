@@ -8,11 +8,11 @@ import {
   View,
 } from 'react-native';
 import { createStackNavigator, createSwitchNavigator, createAppContainer } from 'react-navigation';
-import SignInScreen from './SignInScreen';
+import SignInScreen from '../SignInScreen';
 import AuthLoadingScreen from './AuthLoadingScreen';
-import HomeScreen from './HomeScreen';
-import OtherScreen from './OtherScreen';
-import RegisterScreen from './RegisterScreen';
+import HomeScreen from '../HomeScreen';
+import OtherScreen from '../OtherScreen';
+import RegisterScreen from '../RegisterScreen';
 
 const styles = StyleSheet.create({
   container: {

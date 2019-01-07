@@ -4,15 +4,16 @@ import {
     Text, StyleSheet,
     ImageBackground,
     TextInput,
-    Dimensions, SafeAreaView, KeyboardAvoidingView, TouchableOpacity
+    Dimensions, SafeAreaView, KeyboardAvoidingView, TouchableOpacity, ScrollView
 } from 'react-native';
 
-import bgImage from '../assets/spacewallpaper.jpg';
-import logoImage from '../assets/LogoJenius.png';
+import bgImage from '../../../assets/spacewallpaper.jpg';
 import Icon from 'react-native-vector-icons/Ionicons'
+import Icona from 'react-native-vector-icons/Zocial'
+import IconMaterial from 'react-native-vector-icons/MaterialIcons'
 
 const {width: WIDTH} = Dimensions.get('window')
-export default class LayoutTestunit extends React.Component {
+export default class RegisterComponent extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -34,14 +35,65 @@ export default class LayoutTestunit extends React.Component {
             <SafeAreaView style={styles.backgroundContainer}>
                 <ImageBackground source={bgImage} style={styles.backgroundContainer}>
                     <KeyboardAvoidingView behavior='padding' style={styles.backgroundContainer}>
-                        <View style={styles.logoContainer}>
-                            <Image source={logoImage} style={styles.logo}/>
-                            <Text style={styles.logoText}>Jenius BTPN</Text>
+                        <ScrollView style={{marginTop:'10%'}} >
+                        <View style={styles.inputContainer}>
+                            <IconMaterial name={'person-pin'} size={28} color={'rgba(255, 255, 255, 0.7)'}
+                            style={styles.inputIcon}/>
+                            <TextInput
+                                style={styles.input}
+                                placeholder={'First Name'}
+                                placeholderTextColor={'rgba(255, 255, 255, 0.7)'}
+                                underlineColorAndroid='transparent'
+                            />
+                        </View>
+
+                        <View style={styles.inputContainer}>
+                            <IconMaterial name={'person-pin'} size={28} color={'rgba(255, 255, 255, 0.7)'}
+                                  style={styles.inputIcon}/>
+                            <TextInput
+                                style={styles.input}
+                                placeholder={'Last Name'}
+                                placeholderTextColor={'rgba(255, 255, 255, 0.7)'}
+                                underlineColorAndroid='transparent'
+                            />
+                        </View>
+
+                        <View style={styles.inputContainer}>
+                            <IconMaterial name={'date-range'} size={28} color={'rgba(255, 255, 255, 0.7)'}
+                                  style={styles.inputIcon}/>
+                            <TextInput
+                                style={styles.input}
+                                placeholder={'Birth Date'}
+                                placeholderTextColor={'rgba(255, 255, 255, 0.7)'}
+                                underlineColorAndroid='transparent'
+                            />
+                        </View>
+
+                        <View style={styles.inputContainer}>
+                            <IconMaterial name={'phone-iphone'} size={28} color={'rgba(255, 255, 255, 0.7)'}
+                                  style={styles.inputIcon}/>
+                            <TextInput
+                                style={styles.input}
+                                placeholder={'Phone Number'}
+                                placeholderTextColor={'rgba(255, 255, 255, 0.7)'}
+                                underlineColorAndroid='transparent'
+                            />
+                        </View>
+
+                        <View style={styles.inputContainer}>
+                            <IconMaterial name={'phone-iphone'} size={28} color={'rgba(255, 255, 255, 0.7)'}
+                                          style={styles.inputIcon}/>
+                            <TextInput
+                                style={styles.input}
+                                placeholder={'Phone Type'}
+                                placeholderTextColor={'rgba(255, 255, 255, 0.7)'}
+                                underlineColorAndroid='transparent'
+                            />
                         </View>
 
                         <View style={styles.inputContainer}>
                             <Icon name={'ios-person'} size={28} color={'rgba(255, 255, 255, 0.7)'}
-                            style={styles.inputIcon}/>
+                                  style={styles.inputIcon}/>
                             <TextInput
                                 style={styles.input}
                                 placeholder={'Username'}
@@ -66,10 +118,11 @@ export default class LayoutTestunit extends React.Component {
                             </TouchableOpacity>
 
                             <TouchableOpacity style={styles.btnLogin}>
-                                <Text style={styles.text}>Login</Text>
+                                <Text style={styles.text}>Sign Up</Text>
                             </TouchableOpacity>
 
                         </View>
+                        </ScrollView>
                     </KeyboardAvoidingView>
                 </ImageBackground>
             </SafeAreaView>

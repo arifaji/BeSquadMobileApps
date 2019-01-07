@@ -1,16 +1,18 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import AppNavigator from './src/AppNavigator';
-import LayoutTestunit from './tetsunit/LayoutTestunit';
-import Login from "./tetsunit/Login";
+import AppNavigator from './src/container/AppNavigator';
+import LoginComponent from './src/container/loginpage/LoginComponent';
+import RegisterComponent from "./src/container/registerpage/RegisterComponent";
+import FormCustomer from "./tetsunit/FormCustomer";
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
         {/* <AppNavigator/> */}
-        <LayoutTestunit/>
-        {/*<Login/>*/}
+        {/*<LoginComponent/>*/}
+        <RegisterComponent/>
+        {/*<FormCustomer/>*/}
       </View>
     );
   }
