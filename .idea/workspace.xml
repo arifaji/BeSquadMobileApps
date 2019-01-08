@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90e4fb4a-14e7-4e9f-9e14-54cacf786041" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tetsunit/drawer/DrawerContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tetsunit/drawer/TestHomeScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tetsunit/drawer/TestSettingScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/dashboard/TestHomeScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/service/CustomerService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/service/CustomerService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tetsunit/FormCustomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/tetsunit/FormCustomer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RegisterScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegisterScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/AppNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/AppNavigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/loginpage/LoginComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/loginpage/LoginComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/registerpage/RegisterComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/registerpage/RegisterComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tetsunit/drawer/DrawerContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/tetsunit/drawer/DrawerContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tetsunit/drawer/TestHomeScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tetsunit/drawer/TestSettingScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/dashboard/TestSettingScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tetsunit/snackdraw/SnackDrawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/dashboard/DashboardDrawerComponent.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="22" />
+            <state relative-caret-position="278">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -31,10 +35,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tetsunit/drawer/TestSettingScreen.js">
+        <entry file="file://$PROJECT_DIR$/src/container/dashboard/TestSettingScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="19" column="25" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="19" selection-end-column="25" />
+            <state relative-caret-position="198">
+              <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="31" selection-end-column="6" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -43,10 +47,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tetsunit/drawer/TestHomeScreen.js">
+        <entry file="file://$PROJECT_DIR$/src/container/dashboard/TestHomeScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+            <state relative-caret-position="235">
+              <caret line="97" column="6" selection-start-line="97" selection-start-column="6" selection-end-line="97" selection-end-column="6" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -55,10 +59,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tetsunit/snackdraw/SnackDrawer.js">
+        <entry file="file://$PROJECT_DIR$/src/container/AppNavigator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="47" column="23" lean-forward="true" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
+            <state relative-caret-position="81">
+              <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HomeScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="32" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/container/dashboard/DashboardDrawerComponent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1019">
+              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -78,22 +106,28 @@
         <option value="$PROJECT_DIR$/tetsunit/LayoutTestunit.js" />
         <option value="$PROJECT_DIR$/src/container/loginpage/LayoutTestunit.js" />
         <option value="$PROJECT_DIR$/src/container/loginpage/LayoutComponent.js" />
-        <option value="$PROJECT_DIR$/src/container/loginpage/LoginComponent.js" />
-        <option value="$PROJECT_DIR$/src/container/registerpage/RegisterComponent.js" />
         <option value="$PROJECT_DIR$/tetsunit/AxiosCardComponent.js" />
         <option value="$PROJECT_DIR$/src/container/service/CustomerService.js" />
         <option value="$PROJECT_DIR$/tetsunit/FormCustomer.js" />
         <option value="$PROJECT_DIR$/tetsunit/drawer/DrawerContainer.js" />
         <option value="$PROJECT_DIR$/tetsunit/snackdraw/SnackDrawer.js" />
-        <option value="$PROJECT_DIR$/App.js" />
         <option value="$PROJECT_DIR$/tetsunit/drawer/TestSettingScreen.js" />
         <option value="$PROJECT_DIR$/tetsunit/drawer/TestHomeScreen.js" />
+        <option value="$PROJECT_DIR$/src/container/loginpage/LoginComponent.js" />
+        <option value="$PROJECT_DIR$/src/RegisterScreen.js" />
+        <option value="$PROJECT_DIR$/src/container/registerpage/RegisterComponent.js" />
+        <option value="$PROJECT_DIR$/src/container/dashboard/SnackDrawer.js" />
+        <option value="$PROJECT_DIR$/App.js" />
+        <option value="$PROJECT_DIR$/src/container/dashboard/TestSettingScreen.js" />
+        <option value="$PROJECT_DIR$/src/container/dashboard/DashboardDrawerComponent.js" />
+        <option value="$PROJECT_DIR$/src/container/AppNavigator.js" />
+        <option value="$PROJECT_DIR$/src/container/dashboard/TestHomeScreen.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="94" />
-    <option name="y" value="6" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-449" />
+    <option name="y" value="55" />
     <option name="width" value="1520" />
     <option name="height" value="1032" />
   </component>
@@ -117,19 +151,15 @@
             <path>
               <item name="BeSquad" type="b2602c69:ProjectViewProjectNode" />
               <item name="BeSquad" type="462c0819:PsiDirectoryNode" />
-              <item name="tetsunit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="container" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BeSquad" type="b2602c69:ProjectViewProjectNode" />
               <item name="BeSquad" type="462c0819:PsiDirectoryNode" />
-              <item name="tetsunit" type="462c0819:PsiDirectoryNode" />
-              <item name="drawer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BeSquad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BeSquad" type="462c0819:PsiDirectoryNode" />
-              <item name="tetsunit" type="462c0819:PsiDirectoryNode" />
-              <item name="snackdraw" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="container" type="462c0819:PsiDirectoryNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -142,9 +172,9 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546928732316" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546939585278" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/ReactNative/UiBank" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/container/dashboard" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -152,6 +182,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\BeSquad\BeSquad\src\container\dashboard" />
       <recent name="D:\BeSquad\BeSquad\src\container" />
       <recent name="D:\BeSquad\BeSquad\src\container\loginpage" />
     </key>
@@ -184,18 +215,18 @@
       <updated>1546869167052</updated>
       <workItem from="1546869171663" duration="11704000" />
       <workItem from="1546906956256" duration="7857000" />
-      <workItem from="1546916493890" duration="10388000" />
+      <workItem from="1546916493890" duration="19770000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29949000" />
+    <option name="totallyTimeSpent" value="39331000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="63" y="4" width="1013" height="688" extended-state="0" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.4276094" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32955465" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -211,7 +242,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="TypeScript" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3561151" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3516874" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
@@ -224,7 +255,7 @@
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.24939272" />
+      <window_info anchor="right" id="Ant Build" order="8" weight="0.24868836" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,15 +271,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/container/AuthLoadingScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SignInScreen.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -301,26 +323,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/loginpage/LoginComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tetsunit/drawer/DrawerContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="13" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -355,16 +357,6 @@
     <entry file="file://D:/ReactNative/app2/app.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/registerpage/RegisterComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="115" column="102" selection-start-line="115" selection-start-column="68" selection-end-line="115" selection-end-column="102" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/ReactNative/app2/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-37">
@@ -382,43 +374,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/AppNavigator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="14" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tetsunit/drawer/TestSettingScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="19" column="25" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="19" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tetsunit/snackdraw/SnackDrawer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="47" column="23" lean-forward="true" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-native/Libraries/Components/DrawerAndroid/DrawerLayoutAndroid.android.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -426,10 +381,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tetsunit/drawer/TestHomeScreen.js">
+    <entry file="file://$PROJECT_DIR$/tetsunit/drawer/DrawerContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+        <state relative-caret-position="332">
+          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SignInScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="32" selection-start-line="32" selection-end-line="40" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/loginpage/LoginComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RegisterScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="28" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/registerpage/RegisterComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="127" column="4" selection-start-line="127" selection-start-column="4" selection-end-line="127" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HomeScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="32" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/dashboard/DashboardDrawerComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1019">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/AppNavigator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/dashboard/TestSettingScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="31" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/dashboard/TestHomeScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="97" column="6" selection-start-line="97" selection-start-column="6" selection-end-line="97" selection-end-column="6" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>

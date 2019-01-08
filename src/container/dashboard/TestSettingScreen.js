@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native'
+import {View, Text, StyleSheet, TouchableOpacity, AsyncStorage} from 'react-native'
 import { Header } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/Ionicons'
 
@@ -16,7 +16,9 @@ class TestSettingScreen extends Component {
                         }
                         centerComponent={{ text: 'Test Screen', style: { color: '#fff' } }}
                         rightComponent={
-                            <Text>Hi Dear :)</Text>
+                            <TouchableOpacity onPress={this._signOutAsync}>
+                                <Text>Hi Dear :)</Text>
+                            </TouchableOpacity>
                         }
                     />
                     <Text>Test Setting Screen</Text>
@@ -24,5 +26,9 @@ class TestSettingScreen extends Component {
 
         );
     }
+    _signOutAsync = async () => {
+        await AsyncStorage.clear();
+        this.props.navigation.navigate('Auth');
+    };
 }
 export default TestSettingScreen;

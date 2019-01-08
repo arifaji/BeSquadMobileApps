@@ -4,7 +4,7 @@ import {
     Text, StyleSheet,
     ImageBackground,
     TextInput,
-    Dimensions, SafeAreaView, KeyboardAvoidingView, TouchableOpacity
+    Dimensions, SafeAreaView, KeyboardAvoidingView, TouchableOpacity, Button, AsyncStorage
 } from 'react-native';
 
 import bgImage from '../../../assets/spacewallpaper.jpg';
@@ -65,8 +65,16 @@ export default class LoginComponent extends React.Component {
                                 <Icon name={this.state.press == false ? 'md-eye':'md-eye-off'} size={26} color={'rgba(255, 255, 255, 0.6)'}/>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.btnLogin}>
+                            <TouchableOpacity style={styles.btnLogin} onPress={this.signInAsync}>
                                 <Text style={styles.text}>Login</Text>
+                            </TouchableOpacity>
+
+                            <View style={styles.signUp}>
+                                <Text style={styles.textWhite}>Don't have an account yet ?</Text>
+                            </View>
+
+                            <TouchableOpacity style={styles.btnRegister} onPress={this.showRegisterPage}>
+                                <Text style={styles.text}>Register Now!</Text>
                             </TouchableOpacity>
 
                         </View>
@@ -75,7 +83,19 @@ export default class LoginComponent extends React.Component {
             </SafeAreaView>
         );
     }
+    showRegisterPage = () => {
+        this.props.navigation.navigate('Register');
+    };
+
+    signInAsync = async () => {
+        await AsyncStorage.setItem('userToken', 'abc');
+        this.props.navigation.navigate('App');
+    };
 }
+
+
+
+
 const styles = StyleSheet.create({
     backgroundContainer: {
         flex: 1,
@@ -133,9 +153,26 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         marginTop:20
     },
+    btnRegister:{
+        width: WIDTH - 55,
+        height: 45,
+        marginHorizontal:25,
+        borderRadius: 25,
+        backgroundColor: '#432577',
+        justifyContent:'center',
+        marginTop:3,
+
+    },
     text:{
         color:'rgba(255,255,255,0.7)',
         fontSize:16,
         textAlign: 'center'
-    }
+    },
+    textWhite :{
+        color:'#fff'
+    },
+    signUp :{
+        marginTop:3,
+        alignItems:'center'
+    },
 });

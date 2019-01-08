@@ -8,8 +8,8 @@ import {
   View,
 } from 'react-native';
 import { createStackNavigator, createSwitchNavigator, createAppContainer, createDrawerNavigator } from 'react-navigation';
-import TestHomeScreen from "../drawer/TestHomeScreen";
-import TestSettingScreen from "../drawer/TestSettingScreen";
+import TestHomeScreen from "./TestHomeScreen";
+import TestSettingScreen from "./TestSettingScreen";
 
 
 const styles = StyleSheet.create({
@@ -58,5 +58,5 @@ const AppSwitch = createDrawerNavigator(
     }
 );
 
-const AppNavigator = createAppContainer(AppSwitch)
-export default AppNavigator;
+const DashboardDrawerComponent = createAppContainer(AppSwitch)
+export default DashboardDrawerComponent;

@@ -13,6 +13,10 @@ import AuthLoadingScreen from './AuthLoadingScreen';
 import HomeScreen from '../HomeScreen';
 import OtherScreen from '../OtherScreen';
 import RegisterScreen from '../RegisterScreen';
+import LoginComponent from "./loginpage/LoginComponent";
+import TestHomeScreen from "./dashboard/TestHomeScreen";
+import RegisterComponent from "./registerpage/RegisterComponent";
+import DashboardDrawerComponent from "./dashboard/DashboardDrawerComponent";
 
 const styles = StyleSheet.create({
   container: {
@@ -25,7 +29,11 @@ const styles = StyleSheet.create({
 const AppStack = createStackNavigator(
     { 
         Home : {
-            screen : HomeScreen
+            screen : DashboardDrawerComponent,
+            headerMode: 'none',
+            navigationOptions:()=> ({
+                header:null
+            })
         },
         Other : {
             screen : OtherScreen
@@ -35,10 +43,18 @@ const AppStack = createStackNavigator(
 const AuthStack = createStackNavigator(
     { 
         SignIn: {
-            screen : SignInScreen
+            screen : LoginComponent,
+            headerMode: 'none',
+            navigationOptions:()=> ({
+                header:null
+            })
         },
         Register: {
-            screen : RegisterScreen
+            screen : RegisterComponent,
+            headerMode: 'none',
+            navigationOptions:()=> ({
+                header:null
+            })
         }
     }
 );

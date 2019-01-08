@@ -4,7 +4,7 @@ import {
     Text, StyleSheet,
     ImageBackground,
     TextInput,
-    Dimensions, SafeAreaView, KeyboardAvoidingView, TouchableOpacity, ScrollView
+    Dimensions, SafeAreaView, KeyboardAvoidingView, TouchableOpacity, ScrollView, Button
 } from 'react-native';
 
 import bgImage from '../../../assets/spacewallpaper.jpg';
@@ -117,7 +117,7 @@ export default class RegisterComponent extends React.Component {
                                 <Icon name={this.state.press == false ? 'md-eye':'md-eye-off'} size={26} color={'rgba(255, 255, 255, 0.6)'}/>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.btnLogin}>
+                            <TouchableOpacity style={styles.btnLogin} onPress={this.signInAsync} >
                                 <Text style={styles.text}>Sign Up</Text>
                             </TouchableOpacity>
 
@@ -128,6 +128,9 @@ export default class RegisterComponent extends React.Component {
             </SafeAreaView>
         );
     }
+    signInAsync = async () => {
+        this.props.navigation.navigate('SignIn');
+    };
 }
 const styles = StyleSheet.create({
     backgroundContainer: {

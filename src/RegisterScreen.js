@@ -25,7 +25,6 @@ export default class RegisterScreen extends React.Component {
     }
 
     signInAsync = async () => {
-    
     this.props.navigation.navigate('SignIn');
     };
 }
