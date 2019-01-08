@@ -57,6 +57,7 @@ export default class FormCustomer extends React.Component {
 
     render() {
         return(
+
             <View style={styles.denis} >
                 <View style={styles.form} >
                     <TextInput
