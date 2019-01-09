@@ -7,7 +7,7 @@ import {
     Dimensions, SafeAreaView, KeyboardAvoidingView, TouchableOpacity, Button, AsyncStorage,Alert
 } from 'react-native';
 
-import bgImage from '../../../assets/spacewallpaper.jpg';
+import bgImage from '../../../assets/spacewallpaper.png';
 import logoImage from '../../../assets/LogoJenius.png';
 import Icon from 'react-native-vector-icons/Ionicons'
 
@@ -99,7 +99,7 @@ export default class LoginComponent extends React.Component {
                     <KeyboardAvoidingView behavior='padding' style={styles.backgroundContainer}>
                         <View style={styles.logoContainer}>
                             <Image source={logoImage} style={styles.logo}/>
-                            <Text style={styles.logoText}>Jenius BTPN</Text>
+                            <Text style={styles.logoText}>Bang Bank</Text>
                         </View>
 
                         <View style={styles.inputContainer}>
@@ -127,7 +127,7 @@ export default class LoginComponent extends React.Component {
                             />
 
                             <TouchableOpacity style={styles.btnEye} onPress={this.showPass.bind(this)}>
-                                <Icon name={this.state.press == false ? 'md-eye':'md-eye-off'} size={26} color={'rgba(255, 255, 255, 0.6)'}/>
+                                <Icon name={this.state.press == false ? 'md-eye':'md-eye-off'} size={26} color={'rgba(255, 255, 255, 0.4)'}/>
                             </TouchableOpacity>
 
                             <TouchableOpacity style={styles.btnLogin} onPress={() => this.submit()}>
@@ -178,11 +178,11 @@ const styles = StyleSheet.create({
         marginBottom: 50
     },
     logoText:{
-        color: 'white',
-        fontSize: 20,
+        color: '#b16baf',
+        fontSize: 40,
         fontWeight:'500',
         marginTop: 10,
-        opacity: 0.5
+        opacity: 0.9
     },
     inputContainer :{
         marginTop: 10

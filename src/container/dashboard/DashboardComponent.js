@@ -39,13 +39,13 @@ export default class DashboardComponent extends Component {
                             </TouchableOpacity>
                         }
                         centerComponent={{ text: 'Dashboard', style: { color: '#fff' } }}
-                        // rightComponent={
-                        //     <TouchableOpacity onPress={this._signOutAsync}>
-                        //         <IconCom name={'logout-variant'} size={26} color={'#fff'}/>
-                        //     </TouchableOpacity>
-                        // }
+                        rightComponent={
+                            <TouchableOpacity onPress={this._signOutAsync}>
+                                <IconCom name={'logout-variant'} size={26} color={'#fff'}/>
+                            </TouchableOpacity>
+                        }
                         containerStyle={{
-                            backgroundColor: '#3d9eaf',
+                            backgroundColor: 'rgba(57, 151, 171, 0.3)',
                             justifyContent: 'space-around',
                         }}
                     />
@@ -155,27 +155,33 @@ const styles = StyleSheet.create({
     },
     cardRight:{
         borderRadius:20,
-        backgroundColor:'rgba(255, 255, 255, 0.7)',
+        backgroundColor:'rgba(255, 255, 255, 0.5)',
         marginTop:15,
-        marginRight: 10,
+        marginRight: 22,
         padding:20,
         alignItems:'center',
-        justifyContent:'center'
+        justifyContent:'center',
+        elevation:1,
+        shadowColor: '#000'
     },
     cardLeft:{
         borderRadius:20,
-        backgroundColor:'rgba(255, 255, 255, 0.7)',
+        backgroundColor:'rgba(255, 255, 255, 0.5)',
         marginTop:15,
-        marginLeft: 10,
+        marginLeft: 22,
         padding:20,
         alignItems:'center',
-        justifyContent:'center'
+        justifyContent:'center',
+        elevation:1,
+        shadowColor: '#000'
     },
     cardBig:{
         borderRadius:20,
-        backgroundColor:'rgba(255, 255, 255, 0.7)',
+        backgroundColor:'rgba(255, 255, 255, 0.5)',
         marginHorizontal:15,
         paddingVertical: 15,
-        marginTop:15
+        marginTop:15,
+        elevation:1,
+        shadowColor: '#000'
     },
 });

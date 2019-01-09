@@ -7,7 +7,7 @@ import {
     Dimensions, SafeAreaView, KeyboardAvoidingView, TouchableOpacity, ScrollView, Button
 } from 'react-native';
 
-import bgImage from '../../../assets/spacewallpaper.jpg';
+import bgImage from '../../../assets/spacewallpaper.png';
 import Icon from 'react-native-vector-icons/Ionicons'
 import Icona from 'react-native-vector-icons/Zocial'
 import IconMaterial from 'react-native-vector-icons/MaterialIcons'
