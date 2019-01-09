@@ -4,7 +4,7 @@ import {
     Text, StyleSheet,
     ImageBackground,
     TextInput,
-    Dimensions, SafeAreaView, KeyboardAvoidingView, TouchableOpacity, Button, AsyncStorage
+    Dimensions, SafeAreaView, KeyboardAvoidingView, TouchableOpacity, Button, AsyncStorage,Alert
 } from 'react-native';
 
 import bgImage from '../../../assets/spacewallpaper.jpg';
@@ -12,14 +12,77 @@ import logoImage from '../../../assets/LogoJenius.png';
 import Icon from 'react-native-vector-icons/Ionicons'
 
 const {width: WIDTH} = Dimensions.get('window')
+
 export default class LoginComponent extends React.Component {
     constructor(props){
         super(props);
         this.state = {
             showPass: true,
-            press: false
+            press: false,
+            accounts: [{
+                username: '',
+                password: '',
+                status: ''
+
+            }]
         }
     }
+
+    updateValue(text, field) {
+        if (field == 'username') {
+            this.setState({
+                username: text,
+            })
+        } else if (field == 'password') {
+            this.setState({
+                password: text
+            })
+        }
+    }
+
+    submit()
+    {
+        let accounts={}
+        accounts.username=this.state.username,
+            accounts.password=this.state.password
+
+        var url = 'http://192.168.1.8:7000/api/customer/auth';
+
+        fetch(url, {
+            method: 'POST', // or 'PUT'
+            body: JSON.stringify(accounts), // data can be `string` or {object}!
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+            .then((response) =>{
+                console.log('Status:', JSON.stringify(response.status));
+                if (response.status == '200') {
+                    console.log(response);
+                    // AsyncStorage.setItem('tokenUser', response.token);
+                    AsyncStorage.setItem('statusUser', response.status);
+                    AsyncStorage.setItem('idUser', response.values.account_id);
+                    AsyncStorage.setItem('Username', response.values.username);
+                    // const resetAction = NavigationActions.reset({
+                    //     index: 0,
+                    //     actions: [
+                    //         NavigationActions.navigate({ routeName: 'Welcome'})
+                    //     ]
+                    // });
+                    // this.props.data.dispatch(resetAction);
+                    this.props.navigation.navigate('App');
+                }else{
+
+                    this.setState({ spinner: false });
+                    setTimeout(() => {
+                        Alert.alert('Warning','Username / Password Salah!');
+                    }, 10);
+
+                }})
+        // .catch(error => console.error('Error:', error));
+    }
+    // }
+
 
     showPass = () => {
         if (this.state.press == false){
@@ -47,6 +110,7 @@ export default class LoginComponent extends React.Component {
                                 placeholder={'Username'}
                                 placeholderTextColor={'rgba(255, 255, 255, 0.7)'}
                                 underlineColorAndroid='transparent'
+                                onChangeText={(text) => this.updateValue(text,'username')}
                             />
                         </View>
 
@@ -59,13 +123,14 @@ export default class LoginComponent extends React.Component {
                                 secureTextEntry={this.state.showPass }
                                 placeholderTextColor={'rgba(255, 255, 255, 0.7)'}
                                 underlineColorAndroid='transparent'
+                                onChangeText={(text) => this.updateValue(text,'password')}
                             />
 
                             <TouchableOpacity style={styles.btnEye} onPress={this.showPass.bind(this)}>
                                 <Icon name={this.state.press == false ? 'md-eye':'md-eye-off'} size={26} color={'rgba(255, 255, 255, 0.6)'}/>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.btnLogin} onPress={this.signInAsync}>
+                            <TouchableOpacity style={styles.btnLogin} onPress={() => this.submit()}>
                                 <Text style={styles.text}>Login</Text>
                             </TouchableOpacity>
 

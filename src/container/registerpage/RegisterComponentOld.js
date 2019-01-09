@@ -11,26 +11,23 @@ import bgImage from '../../../assets/spacewallpaper.jpg';
 import Icon from 'react-native-vector-icons/Ionicons'
 import Icona from 'react-native-vector-icons/Zocial'
 import IconMaterial from 'react-native-vector-icons/MaterialIcons'
-import IconEntypo from 'react-native-vector-icons/Entypo'
-import IconMacom from 'react-native-vector-icons/MaterialCommunityIcons'
 
 const {width: WIDTH} = Dimensions.get('window')
-export default class RegisterComponent extends React.Component {
+export default class RegisterComponentOld extends React.Component {
     constructor(props){
         super(props);
         this.state = {
             showPass: true,
             press: false,
             customer:[{
-                firstname: '',
-                lastname: '',
-                gender:'',
-                address:'',
-                phonenumber:'',
-                email:'',
+                customerNumber:'',
+                firstName: '',
+                lastName: '',
+                birthDate:'',
                 username:'',
                 password:'',
-
+                phoneType:'',
+                phoneNumber:''
             }]
         }
     }
@@ -44,23 +41,14 @@ export default class RegisterComponent extends React.Component {
     }
 
     updateValue(text, field){
-        if(field=='firstname' && field!==" "){
-            this.setState({firstname:text})
+        if(field=='firstName' && field!==" "){
+            this.setState({firstName:text})
         }
-        if(field=='lastname' && field!==" "){
-            this.setState({lastname:text})
+        if(field=='lastName' && field!==" "){
+            this.setState({lastName:text})
         }
-        if(field=='gender' && field!==" "){
-            this.setState({gender:text})
-        }
-        if(field=='address' && field!==" "){
-            this.setState({address:text})
-        }
-        if(field=='phonenumber' && field!==" "){
-            this.setState({phonenumber:text})
-        }
-        if(field=='email' && field!==" "){
-            this.setState({email:text})
+        if(field=='birthDate' && field!==" "){
+            this.setState({birthDate:text})
         }
         if(field=='username' && field!==" "){
             this.setState({username:text})
@@ -68,22 +56,25 @@ export default class RegisterComponent extends React.Component {
         if(field=='password' && field!==" "){
             this.setState({password:text})
         }
-
+        if(field=='phoneType' && field!==" "){
+            this.setState({phoneType:text})
+        }
+        if(field=='phoneNumber' && field!==" "){
+            this.setState({phoneNumber:text})
+        }
     }
 
     submit(){
         let customer={}
-            customer.firstname=this.state.firstname,
-            customer.lastname=this.state.lastname,
-            customer.gender=this.state.gender,
-            customer.address=this.state.address,
-            customer.phonenumber=this.state.phonenumber,
-            customer.email=this.state.email,
+            customer.firstName=this.state.firstName,
+            customer.lastName=this.state.lastName,
+            customer.birthDate=this.state.birthDate,
             customer.username=this.state.username,
-            customer.password=this.state.password
+            customer.password=this.state.password,
+            customer.phoneType=this.state.phoneType,
+            customer.phoneNumber=this.state.phoneNumber
 
-
-        var url = 'http://192.168.1.36:7000/api/customer';
+        var url = 'http://192.168.1.26:3000/customer';
 
         fetch(url,{
             method: 'POST', // or 'PUT'
@@ -113,7 +104,7 @@ export default class RegisterComponent extends React.Component {
                                 placeholder={'First Name'}
                                 placeholderTextColor={'rgba(255, 255, 255, 0.7)'}
                                 underlineColorAndroid='transparent'
-                                onChangeText={(text) => this.updateValue(text,'firstname')}
+                                onChangeText={(text) => this.updateValue(text,'firstName')}
                             />
                         </View>
 
@@ -125,31 +116,19 @@ export default class RegisterComponent extends React.Component {
                                 placeholder={'Last Name'}
                                 placeholderTextColor={'rgba(255, 255, 255, 0.7)'}
                                 underlineColorAndroid='transparent'
-                                onChangeText={(text) => this.updateValue(text,'lastname')}
+                                onChangeText={(text) => this.updateValue(text,'lastName')}
                             />
                         </View>
 
                         <View style={styles.inputContainer}>
-                            <IconMacom name={'human-male-female'} size={28} color={'rgba(255, 255, 255, 0.7)'}
-                                          style={styles.inputIcon}/>
-                            <TextInput
-                                style={styles.input}
-                                placeholder={'Gender'}
-                                placeholderTextColor={'rgba(255, 255, 255, 0.7)'}
-                                underlineColorAndroid='transparent'
-                                onChangeText={(text) => this.updateValue(text,'gender')}
-                            />
-                        </View>
-
-                        <View style={styles.inputContainer}>
-                            <IconEntypo name={'location'} size={28} color={'rgba(255, 255, 255, 0.7)'}
+                            <IconMaterial name={'date-range'} size={28} color={'rgba(255, 255, 255, 0.7)'}
                                   style={styles.inputIcon}/>
                             <TextInput
                                 style={styles.input}
-                                placeholder={'Address'}
+                                placeholder={'Birth Date'}
                                 placeholderTextColor={'rgba(255, 255, 255, 0.7)'}
                                 underlineColorAndroid='transparent'
-                                onChangeText={(text) => this.updateValue(text,'address')}
+                                onChangeText={(text) => this.updateValue(text,'birthDate')}
                             />
                         </View>
 
@@ -161,19 +140,19 @@ export default class RegisterComponent extends React.Component {
                                 placeholder={'Phone Number'}
                                 placeholderTextColor={'rgba(255, 255, 255, 0.7)'}
                                 underlineColorAndroid='transparent'
-                                onChangeText={(text) => this.updateValue(text,'phonenumber')}
+                                onChangeText={(text) => this.updateValue(text,'phoneNumber')}
                             />
                         </View>
 
                         <View style={styles.inputContainer}>
-                            <IconMaterial name={'email'} size={28} color={'rgba(255, 255, 255, 0.7)'}
+                            <IconMaterial name={'phone-iphone'} size={28} color={'rgba(255, 255, 255, 0.7)'}
                                           style={styles.inputIcon}/>
                             <TextInput
                                 style={styles.input}
-                                placeholder={'E-Mail'}
+                                placeholder={'Phone Type'}
                                 placeholderTextColor={'rgba(255, 255, 255, 0.7)'}
                                 underlineColorAndroid='transparent'
-                                onChangeText={(text) => this.updateValue(text,'email')}
+                                onChangeText={(text) => this.updateValue(text,'phoneType')}
                             />
                         </View>
 
