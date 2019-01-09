@@ -8,13 +8,8 @@ import {
   View,
 } from 'react-native';
 import { createStackNavigator, createSwitchNavigator, createAppContainer } from 'react-navigation';
-import SignInScreen from '../SignInScreen';
 import AuthLoadingScreen from './AuthLoadingScreen';
-import HomeScreen from '../HomeScreen';
-import OtherScreen from '../OtherScreen';
-import RegisterScreen from '../RegisterScreen';
 import LoginComponent from "./loginpage/LoginComponent";
-import TestHomeScreen from "./dashboard/TestHomeScreen";
 import RegisterComponent from "./registerpage/RegisterComponent";
 import DashboardDrawerComponent from "./dashboard/DashboardDrawerComponent";
 
@@ -34,9 +29,6 @@ const AppStack = createStackNavigator(
             navigationOptions:()=> ({
                 header:null
             })
-        },
-        Other : {
-            screen : OtherScreen
         }
     }
 );

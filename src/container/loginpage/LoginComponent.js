@@ -46,7 +46,7 @@ export default class LoginComponent extends React.Component {
         accounts.username=this.state.username,
             accounts.password=this.state.password
 
-        var url = 'http://192.168.1.8:7000/api/customer/auth';
+        var url = 'http://192.168.1.39:7000/api/customer/auth';
 
         fetch(url, {
             method: 'POST', // or 'PUT'
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        width:null,
+        width:WIDTH,
         height:null,
     },
     logo: {
@@ -197,7 +197,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(0,0,0,0.35)',
         color: 'rgba(255,255,255,0.7)',
         marginHorizontal:25
-
     },
     inputIcon :{
         position : 'absolute',

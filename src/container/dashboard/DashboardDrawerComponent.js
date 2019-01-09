@@ -3,58 +3,55 @@ import {
   ActivityIndicator,
   AsyncStorage,
   Button,
-  StatusBar,
-  StyleSheet,
-  View,
+  StatusBar,ScrollView,
+  StyleSheet,Image,
+  View,SafeAreaView,
 } from 'react-native';
-import { createStackNavigator, createSwitchNavigator, createAppContainer, createDrawerNavigator } from 'react-navigation';
-import TestHomeScreen from "./TestHomeScreen";
-import TestSettingScreen from "./TestSettingScreen";
+import { createStackNavigator, createSwitchNavigator,
+    DrawerItems,createAppContainer, createDrawerNavigator } from 'react-navigation';
+import DashboardComponent from "./DashboardComponent";
+import TransaksiComponent from "./TransaksiComponent";
+import HistoryComponent from "./HistoryComponent";
+import ProfileComponent from "./ProfileComponent";
+import AboutComponent from "./AboutComponent";
 
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const CustomerDrawerComponent = (props) => (
+    <SafeAreaView style={{flex:1}}>
+        <View style={{height:150,backgroundColor:'white',alignItems: 'center',justifyContent: 'flex-end'}}>
+            <Image source={require('../../../assets/LogoJenius.png')}
+                style={{height:120,width:120,borderRadius:60}}
+            />
+        </View>
+        <ScrollView>
+            <DrawerItems {...props}/>
+        </ScrollView>
+    </SafeAreaView>
+)
 
-const AppStack = createStackNavigator(
-    {
-      Home : {
-        screen : TestHomeScreen,
-          headerMode: 'none',
-          navigationOptions:()=> ({
-              header:null
-          })
-
-      }
-    }
-);
-const AuthStack = createStackNavigator(
-    {
-      Setting: {
-        screen : TestSettingScreen
-      }, headerMode: 'none',
-        navigationOptions:()=> ({
-            header:null
-        })
-    }
-);
 const AppSwitch = createDrawerNavigator(
     {
 
       // App: AppStack,
       // Auth: AuthStack,
-        Home : {
-            screen : TestHomeScreen
+        Dashboard : {
+            screen : DashboardComponent
         },
-        Setting: {
-            screen : TestSettingScreen
-        }
+        Transaction : {
+          screen : TransaksiComponent
+        },
+        History : {
+          screen : HistoryComponent
+        },
+        Profile : {
+          screen : ProfileComponent
+        },
+        About : {
+          screen : AboutComponent
+        },
 
-
+    },{
+        contentComponent:CustomerDrawerComponent
     }
 );
 

@@ -2,8 +2,8 @@ import React from 'react'
 import { StyleSheet,View, Text} from 'react-native';
 
 import { createDrawerNavigator } from 'react-navigation'
-import TestHomeScreen from "../../src/container/dashboard/TestHomeScreen";
-import TestSettingScreen from "../../src/container/dashboard/TestSettingScreen";
+import DashboardComponent from "../../src/container/dashboard/DashboardComponent";
+
 
 export default class DrawerContainer extends React.Component {
 
@@ -16,8 +16,7 @@ export default class DrawerContainer extends React.Component {
     }
 }
 const AppDrawerNavigator = createDrawerNavigator({
-    Home:TestHomeScreen,
-    Setting: TestSettingScreen
+    Home:DashboardComponent
 });
 
 

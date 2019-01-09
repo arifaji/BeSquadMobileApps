@@ -3,7 +3,7 @@ import {View, Text, StyleSheet, TouchableOpacity, AsyncStorage} from 'react-nati
 import { Header } from 'react-native-elements'
 import Icon from 'react-native-vector-icons/Ionicons'
 
-class TestSettingScreen extends Component {
+export default class TransaksiComponent extends Component {
     render() {
         return(
 
@@ -21,7 +21,11 @@ class TestSettingScreen extends Component {
                             </TouchableOpacity>
                         }
                     />
-                    <Text>Test Setting Screen</Text>
+
+
+                    <Text>Test Transaksi Screen</Text>
+
+
                 </View>
 
         );
@@ -31,4 +35,3 @@ class TestSettingScreen extends Component {
         this.props.navigation.navigate('Auth');
     };
 }
-export default TestSettingScreen;
