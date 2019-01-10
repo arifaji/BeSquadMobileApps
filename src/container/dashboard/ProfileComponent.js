@@ -6,7 +6,7 @@ import {
     AsyncStorage,
     SafeAreaView,
     ImageBackground,
-    KeyboardAvoidingView, ScrollView, TextInput, Dimensions
+    KeyboardAvoidingView, ScrollView, TextInput, Dimensions, Image
 } from 'react-native'
 import {Header,Card,Button,Text} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/Ionicons'
@@ -56,9 +56,79 @@ export default class ProfileComponent extends Component {
                             }}
                         />
 
-                        <View >
-                            <Text>Profilia</Text>
-                        </View>
+
+                            <View style={styles.cardBig}>
+
+                                <View style={{flexDirection:'row',marginLeft: 30,marginRight: 30}}>
+                                    <Image style={{borderRadius:50,width:100,height:100}} source={require('../../../assets/reza.jpg')} />
+                                    <View style={{marginLeft:10,justifyContent:'center'}}>
+                                        <Text style={{color:'rgba(0,0,0,0.7)',fontSize:30}}>
+                                            Hi, Reza
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View >
+                                    <View style={{margin:10}}>
+                                        <View >
+                                            <Text style={{color:'#5f67f4',fontSize:20}}>My Account</Text>
+                                        </View>
+                                    </View>
+                                </View>
+
+                                <View style={styles.infoHistory}>
+                                    <View style={{margin:10}}>
+                                        <View >
+                                            <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                                <Text >Account Number</Text>
+                                                <Text >012930</Text>
+                                            </View>
+                                        </View>
+                                    </View>
+                                </View>
+                                <View style={styles.infoHistory}>
+                                    <View style={{margin:10}}>
+                                        <View >
+                                            <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                                <Text >Total Balance</Text>
+                                                <Text >Rp. 80.000.000,-</Text>
+                                            </View>
+                                        </View>
+                                    </View>
+                                </View>
+                                <View style={styles.infoHistory}>
+                                    <View style={{margin:10}}>
+                                        <View >
+                                            <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                                <Text >Username</Text>
+                                                <Text >rezafjr</Text>
+                                            </View>
+                                        </View>
+                                    </View>
+                                </View>
+                                <View style={styles.infoHistory}>
+                                    <View style={{margin:10}}>
+                                        <View >
+                                            <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                                <Text >Password</Text>
+                                                <Text >******</Text>
+                                            </View>
+                                        </View>
+                                    </View>
+                                </View>
+                                <View style={styles.infoHistory}>
+                                    <View style={{margin:10}}>
+                                        <View >
+                                            <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                                <Text >PIN</Text>
+                                                <Text >******</Text>
+                                            </View>
+                                        </View>
+                                    </View>
+                                </View>
+
+                            </View>
+
 
                 </ImageBackground>
 
@@ -80,8 +150,6 @@ const {width: WIDTH} = Dimensions.get('window')
 const styles = StyleSheet.create({
     backgroundContainer: {
         flex: 1,
-        alignItems: 'center',
-
         width:null,
         height:null,
     },
@@ -138,5 +206,21 @@ const styles = StyleSheet.create({
         color:'rgba(255,255,255,0.7)',
         fontSize:16,
         textAlign: 'center'
-    }
+    },
+    cardBig:{
+        borderRadius:20,
+        backgroundColor:'rgba(255, 255, 255, 0.5)',
+        marginHorizontal:15,
+        paddingVertical: 15,
+        marginTop:15,
+        elevation:1,
+        shadowColor: '#000'
+    },
+    infoHistory:{
+        borderTopWidth: 1,
+        borderTopColor:'rgba(0,0,0,0.1)',
+        backgroundColor:'rgba(255,255,255,0.1)',
+        marginHorizontal:3
+
+    },
 });

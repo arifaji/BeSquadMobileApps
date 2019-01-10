@@ -6,7 +6,7 @@ import {
     AsyncStorage,
     SafeAreaView,
     ImageBackground,
-    KeyboardAvoidingView, ScrollView, TextInput, Dimensions
+    KeyboardAvoidingView, ScrollView, TextInput, Dimensions, Image
 } from 'react-native'
 import {Header,Card,Button,Text} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/Ionicons'
@@ -56,9 +56,20 @@ export default class AboutComponent extends Component {
                             }}
                         />
 
-                        <View >
-                            <Text>Aboutia</Text>
+                    <View style={styles.cardBig}>
+
+                        <View style={{alignItems:'center',marginLeft: 30,marginRight: 30}}>
+                            <Image style={{width:200,height:200}} source={require('../../../assets/LogoJenius.png')} />
+                            <Text style={{color:'rgba(0,0,0,0.7)',fontSize:30}}>Bank Bank Mobile</Text>
+                            <Text>Version 1.0.0</Text>
+                            <View style={{flexDirection:'row'}}>
+                                <Text>Made with </Text>
+                                <IconFa name={'heart'} style={{color:'#ff32df',marginTop:2}} size={16} />
+                                <Text> by BeSquad</Text>
+                            </View>
+
                         </View>
+                    </View>
 
                 </ImageBackground>
 
@@ -80,8 +91,6 @@ const {width: WIDTH} = Dimensions.get('window')
 const styles = StyleSheet.create({
     backgroundContainer: {
         flex: 1,
-        alignItems: 'center',
-
         width:null,
         height:null,
     },
@@ -138,5 +147,21 @@ const styles = StyleSheet.create({
         color:'rgba(255,255,255,0.7)',
         fontSize:16,
         textAlign: 'center'
-    }
+    },
+    cardBig:{
+        borderRadius:20,
+        backgroundColor:'rgba(255, 255, 255, 0.5)',
+        marginHorizontal:15,
+        paddingVertical: 15,
+        marginTop:15,
+        elevation:1,
+        shadowColor: '#000'
+    },
+    infoHistory:{
+        borderTopWidth: 1,
+        borderTopColor:'rgba(0,0,0,0.1)',
+        backgroundColor:'rgba(255,255,255,0.1)',
+        marginHorizontal:3
+
+    },
 });

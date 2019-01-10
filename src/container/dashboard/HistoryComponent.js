@@ -56,17 +56,173 @@ export default class HistoryComponent extends Component {
                             }}
                         />
 
-                        <View style={{elevation: 1,shadowColor: '#000',backgroundColor:'blue',width:WIDTH}}>
-                            <View style={{backgroundColor:'yellow',margin:10}}>
+                        <View style={styles.infoHistory}>
+                            <View style={{margin:10}}>
                                 <View >
-                                    <Text>Current Account</Text>
+                                    <Text style={{color:'#5f67f4',fontSize:20}}>Current Account</Text>
                                     <View style={{flexDirection:'row',justifyContent:'space-between'}}>
-                                        <Text>Account Number</Text>
-                                        <Text>Available Balance</Text>
+                                        <Text style={styles.textSmall}>Account Number</Text>
+                                        <Text style={styles.textSmall}>Current Balance</Text>
+                                    </View>
+                                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                        <Text>8899765</Text>
+                                        <Text>Rp. 10.000.000,-</Text>
                                     </View>
                                 </View>
                             </View>
                         </View>
+
+                    <ScrollView>
+
+                        <View style={styles.infoHistory}>
+                            <View style={{margin:10}}>
+                                <View >
+                                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                        <Text style={styles.textSmall}>Trx.ID:0989</Text>
+                                        <Text style={styles.textSmall}>Cash In</Text>
+                                        <Text style={styles.textSmall}>12-Nov-2018</Text>
+                                    </View>
+                                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                        <Text>6278798</Text>
+                                        <Text>Credit</Text>
+                                        <Text>Rp. 100.000,-</Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </View>
+
+
+
+                        <View style={styles.infoHistory}>
+                            <View style={{margin:10}}>
+                                <View >
+                                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                        <Text style={styles.textSmall}>Trx.ID:0988</Text>
+                                        <Text style={styles.textSmall}>Cash Out</Text>
+                                        <Text style={styles.textSmall}>11-Nov-2018</Text>
+                                    </View>
+                                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                        <Text>5678353</Text>
+                                        <Text>Debit</Text>
+                                        <Text>Rp. 50.000,-</Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </View>
+                        <View style={styles.infoHistory}>
+                            <View style={{margin:10}}>
+                                <View >
+                                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                        <Text style={styles.textSmall}>Trx.ID:0987</Text>
+                                        <Text style={styles.textSmall}>Cash In</Text>
+                                        <Text style={styles.textSmall}>10-Nov-2018</Text>
+                                    </View>
+                                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                        <Text>6278798</Text>
+                                        <Text>Credit</Text>
+                                        <Text>Rp. 10.000,-</Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </View>
+                        <View style={styles.infoHistory}>
+                            <View style={{margin:10}}>
+                                <View >
+                                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                        <Text style={styles.textSmall}>Trx.ID:0986</Text>
+                                        <Text style={styles.textSmall}>Cash In</Text>
+                                        <Text style={styles.textSmall}>12-Nov-2018</Text>
+                                    </View>
+                                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                        <Text>1454534</Text>
+                                        <Text>Debit</Text>
+                                        <Text>Rp. 90.000,-</Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </View>
+                        <View style={styles.infoHistory}>
+                            <View style={{margin:10}}>
+                                <View >
+                                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                        <Text style={styles.textSmall}>Trx.ID:0985</Text>
+                                        <Text style={styles.textSmall}>Cash In</Text>
+                                        <Text style={styles.textSmall}>09-Nov-2018</Text>
+                                    </View>
+                                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                        <Text>8694758</Text>
+                                        <Text>Credit</Text>
+                                        <Text>Rp. 300.000,-</Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </View>
+                        <View style={styles.infoHistory}>
+                            <View style={{margin:10}}>
+                                <View >
+                                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                        <Text style={styles.textSmall}>Trx.ID:0989</Text>
+                                        <Text style={styles.textSmall}>Cash In</Text>
+                                        <Text style={styles.textSmall}>12-Nov-2018</Text>
+                                    </View>
+                                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                        <Text>6278798</Text>
+                                        <Text>Creditos</Text>
+                                        <Text>Rp. 100.000,-</Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </View>
+                        <View style={styles.infoHistory}>
+                            <View style={{margin:10}}>
+                                <View >
+                                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                        <Text style={styles.textSmall}>Trx.ID:0989</Text>
+                                        <Text style={styles.textSmall}>Cash In</Text>
+                                        <Text style={styles.textSmall}>12-Nov-2018</Text>
+                                    </View>
+                                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                        <Text>6278798</Text>
+                                        <Text>Creditos</Text>
+                                        <Text>Rp. 100.000,-</Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </View>
+                        <View style={styles.infoHistory}>
+                            <View style={{margin:10}}>
+                                <View >
+                                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                        <Text style={styles.textSmall}>Trx.ID:0989</Text>
+                                        <Text style={styles.textSmall}>Cash In</Text>
+                                        <Text style={styles.textSmall}>12-Nov-2018</Text>
+                                    </View>
+                                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                        <Text>6278798</Text>
+                                        <Text>Creditos</Text>
+                                        <Text>Rp. 100.000,-</Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </View>
+                        <View style={styles.infoHistory}>
+                            <View style={{margin:10}}>
+                                <View >
+                                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                        <Text style={styles.textSmall}>Trx.ID:0989</Text>
+                                        <Text style={styles.textSmall}>Cash In</Text>
+                                        <Text style={styles.textSmall}>12-Nov-2018</Text>
+                                    </View>
+                                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                        <Text>6278798</Text>
+                                        <Text>Creditos</Text>
+                                        <Text>Rp. 100.000,-</Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </View>
+
+                    </ScrollView>
 
                 </ImageBackground>
 
@@ -146,5 +302,15 @@ const styles = StyleSheet.create({
         color:'rgba(255,255,255,0.7)',
         fontSize:16,
         textAlign: 'center'
+    },
+    infoHistory:{
+        elevation: 1,
+        shadowColor: '#000',
+        backgroundColor:'rgba(255,255,255,0.7)',
+        width:WIDTH
+    },
+    textSmall:{
+        color:'rgba(0,0,0,0.5)',
+        fontSize:12
     }
 });

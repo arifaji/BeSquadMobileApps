@@ -46,7 +46,7 @@ export default class LoginComponent extends React.Component {
         accounts.username=this.state.username,
             accounts.password=this.state.password
 
-        var url = 'http://192.168.1.39:7000/api/customer/auth';
+        var url = 'http://192.168.1.22:7000/api/customer/auth';
 
         fetch(url, {
             method: 'POST', // or 'PUT'
